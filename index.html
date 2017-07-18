@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neighborhood Map Project</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+ 
+<div class="container-fluid">
+    <div class="page-title">
+        <h1>Park Places</h1>
+    </div>
+    <div class="col-md-3">
+        <div id="loading_map_error" class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>Error loading map
+        </div>
+		<form class="search">
+            Search: <input type="text" id="search-input"  data-bind="textInput: filterInput">
+		</form>
+        <div class="list-group" data-bind="foreach: filterList">
+                <a href="#" class="list-group-item" data-bind="text: name, click: $parent.itemClick"></a>
+        </div>
+    </div>
+    <div class="col-md-9 "id="map"></div>
+        
+</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/knockout-3.4.0.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMOTSw20SDSAy1MgsE9ATXdivfWiQ5WbQ&callback=initMap" async defer onerror="googleError()"></script>
+
+</body>
+</html>

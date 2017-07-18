@@ -1,0 +1,24 @@
+html, 
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #000000;
+	color: #f5f5dc
+}
+#loading_map_error{
+    display: none;
+}
+h1 {
+	text-align: center;
+}
+#search-input {
+	
+	color: #000000;
+}
+.search{
+    padding-bottom: 20px;
+}
+h3,p {
+	color: #000000;
+}
